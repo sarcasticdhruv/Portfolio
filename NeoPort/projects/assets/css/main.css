@@ -1,0 +1,356 @@
+
+html{
+    font-size: .35em;
+}
+
+/* body{
+    background-color: black;
+    font-family: "Roboto Mono";
+    margin: 0;
+    padding: 0;
+    max-width: fit-content;
+} */
+body{
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  font-family: "Roboto Mono";
+  display:flex;
+  justify-content:center;
+  height:100vh;
+}
+
+.cv:hover, .misc:hover, .resume:hover,
+.projects:hover, .contact:hover, .back:hover{
+  cursor: pointer;
+  color: rgb(217, 255, 241);
+  font-size: larger !important;
+  text-shadow: 0 0 1em rgb(187, 234, 216);
+}
+
+
+.cv, .misc, .resume,
+.projects, .contact, .back{
+  font-size: 0em;
+  color: lightskyblue;
+  font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+}
+.projects{
+  color: aliceblue;
+}
+
+.arrowLeft:hover, .arrowRight:hover{
+  cursor: pointer;
+  border: solid rgb(217, 255, 241)!important;
+  border-width: 0 .2em .2em 0!important;
+  font-size: larger !important;
+}
+.arrowLeft, .arrowRight{
+  display: inline-block;
+  border: solid black;
+  border-width: 0 0 0 0;
+  animation: arrowAnim 1s forwards linear 1s;
+}
+
+
+@keyframes arrowAnim{
+  to{
+    display: inline-block;
+    border: solid skyblue;
+    border-width: 0 .15em .15em 0;
+    padding: .5em;
+  }
+}
+
+.arrowLeft{
+  transform: rotate(135deg);
+}
+.arrowRight{
+  transform: rotate(-45deg);
+}
+
+.topLine{
+    background-color: lightskyblue;
+    margin-top: .3em;
+    height: .1em;
+    width: 0%;
+    margin-left: 50%;
+    
+  animation: topLine 3s alternate forwards steps(70) 1s; 
+}
+@keyframes topLine {
+    from {
+        width: 0%;
+        margin-left: 50%;
+    }
+    to{
+        margin-left: 2.5%;
+        width: 95%;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+/* .page{
+    filter: blur(.5em);
+    animation: unblur 2s forwards linear;
+    max-width: 100%;
+    max-height: max-content;
+} */
+
+.page {
+  position: absolute;
+  font-size: 16px;
+  height: 100vh;
+  max-width: 100%;
+  /* margin: auto; */
+  gap: .5em;
+  display: grid;
+  grid-template-areas:
+      'nav'
+      'top';
+  grid-template-rows: .5fr 8.4fr;
+}
+/* .nav{
+    margin-top: .5em;
+} */
+
+.optionsContainer{
+    position: absolute;
+    top: 9%;
+    left: 2%;
+    height: 90%;
+    width: 96%;
+    margin: auto;
+    gap: 3%;
+    justify-content: center;
+}
+
+
+.traitGroups{
+  display: flex;
+  flex-direction: row;
+  justify-content: center ;
+  width: 80vw;
+}
+
+.projectBox{
+  border: 1px solid aliceblue;
+  width: 33%;
+  height: 2em;
+  margin-left: .1em;
+  margin-right: .1em;
+  padding: 10px 10px;
+  margin-top: 1.5em;
+}
+.project{
+  font-size: clamp(0rem, .8vw + .7rem, 2rem);
+  margin-top: .4em;
+  text-align: center;
+  overflow: hidden;
+  color: aliceblue;
+}
+
+H3{
+  color: aliceblue;
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+p{
+  color: aliceblue;
+}
+
+.h3Box {
+  display: flex;
+  justify-content: center;
+  margin-top: 0vh;
+  width: 100%; /* Add this property to make sure the h3Box takes up the full width of its parent */
+  padding: 0 20px; /* Add this property to add some horizontal padding to the h3Box */
+}
+
+.projectGroup {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20vh;
+  margin-top: 10vh;
+}
+
+.projectBox{
+  display: flex;
+  flex-direction: column;
+  width: 400px; /* Set the desired width */
+  height: 250px; /* Set the desired height */
+  border: 1px solid #ccc; /* For visual reference */
+}
+
+.project {
+  color: aliceblue;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 5px 5px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* This will make the content area take up the remaining space */
+  overflow: hidden; /* This will hide any content that overflows */
+}
+
+.content p {
+  flex: 1; /* This will make the paragraph take up the available space */
+  overflow-y: auto; /* This will add a scrollbar if the text overflows */
+}
+
+.projectGroup img {
+  margin-top: 25px;
+  width: 400px; /* Set the desired width */
+  height: 272px; /* Set the height to auto to maintain the aspect ratio */
+  margin-left: 20px; /* Add some margin between the projectBox and the image */
+}
+
+/* .projectGroup{
+  opacity: 0;
+  width:0%;
+} */
+
+.projectGroup.one{
+  animation: traitReveal 3.5s 1s forwards;
+}
+.projectGroup.two{
+  animation: traitReveal 3.2s 1.5s forwards;
+}
+.projectGroup.three{
+  animation: traitReveal 3s 2s forwards;
+}
+
+@keyframes traitReveal {
+  to{
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.projectBox{
+  animation: traitBoxColors 2s 2s steps(10) forwards;
+}
+
+@keyframes traitBoxColors {
+  0%{
+    background-color: rgba(187, 234, 216, 0.5);
+  }
+  50%{
+    
+    background-color: rgba(100, 100, 133, 0.5);
+  }
+  70%{
+    background-color: rgba(10, 181, 248, 0.5);
+  }
+  90%{
+    background-color: rgba(12, 250, 159, 0.5);
+  }
+  100%{
+    
+  }
+}
+
+.project{
+  opacity: 0;
+  animation: traitTextReveal .5s forwards 1s;
+}
+@keyframes traitTextReveal {
+  to{
+    opacity: 1;
+  }
+}
+
+/* new */
+.projectGroup {
+  display: none;
+}
+
+.projectGroup.active {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20vh;
+  margin-top: 10vh;
+} 
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.arrow {
+  /* width: 50px; */
+  padding: 30px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  cursor: pointer;
+  margin: 0 1rem;
+  transform: scale(2); /* This will increase the size of the icon on hover */
+}
+
+
+.arrow.right:hover {
+  transform: scale(2.4); /* This will increase the size of the icon on hover */
+  cursor: pointer; /* This will change the cursor to a pointer on hover */
+}
+
+.arrow.right:hover{
+  color: #ff0000; /* This will change the color of the icon on hover */
+}
+
+.arrow.left:hover {
+  transform: scale(2.4); /* This will increase the size of the icon on hover */
+  cursor: pointer; /* This will change the cursor to a pointer on hover */
+}
+
+.arrow.left:hover box-icon {
+  color: #ff0000; /* This will change the color of the icon on hover */
+}
+
+.project {
+  position: relative; /* add this */
+}
+
+.project::after {
+  content: ""; /* add this */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: aliceblue;
+  animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

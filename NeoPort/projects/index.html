@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECTS</title>
+    <link rel="stylesheet" href="/NeoPort/projects/assets/css/main.css">
+    <link rel="stylesheet" href="/NeoPort/projects/assets/css/grid.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto Mono:ital,wght@0,300&directory=3&subset=latin&display=swap">
+</head>
+<body>
+    <div class="page">
+        <div class="container nav">
+            <div class="options">
+                <!--this is where the selections for the navigation bar is going to be-->
+                <div class="LA">
+                    <div class="arrowLeft"></div>
+                </div>
+                <a href="/index.html">
+                    <div class="back">
+                        BACK
+                    </div>
+                </a>
+                <a href="/NeoPort/cv">
+                <div class="cv">
+                    CV
+                </div>
+                </a>
+                <a href="/NeoPort/">
+                <div class="resume">
+                    RESUME
+                </div>
+                </a>
+                <a href="/NeoPort/projects/">
+                <div class="projects">
+                    PROJECTS
+                </div>
+                </a>
+                <a href="/NeoPort/contact/">
+                <div class="contact">
+                    CONTACT
+                </div>
+                </a>
+                <div class="RA">
+                    <div class="arrowRight"></div>
+                </div>
+            </div>
+        </div>
+        <canvas id="Matrix"></canvas>
+        <div id="project" class="traits">
+            <div class="h3Box">
+                <h3 class="slideLeft">PROJECTS</h3>
+            </div>
+            <div class="topLine three"></div>
+            <div class="traitGroups" id="elem">
+              <div class="navigation">
+                    <div class="arrow left" onclick="prevProject()"><box-icon name='left-arrow-alt' color='#fdf5f5' ></box-icon></div>
+                   
+                </div>
+                <div class="projectGroup one active">
+                    <div class="projectBox">
+                        <div class="project">
+                            Project 1
+                            <div class="topLine two"></div>
+                        </div class="subject">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem deleniti sapiente tempore laudantium necessitatibus, maxime, omnis ex repellendus doloribus commodi vitae qui recusandae, aspernatur dicta alias harum ipsum nisi.</p>
+                    </div>
+                    <img src="assets/image/img1.jpeg" alt="">
+                </div>
+
+                <div class="projectGroup two">
+                    <div class="projectBox">
+                        <div class="project">
+                            Project 2
+                        </div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem deleniti sapiente tempore laudantium necessitatibus, maxime, omnis ex repellendus doloribus commodi vitae qui recusandae, aspernatur dicta alias harum ipsum nisi.</p>
+                    </div>
+                    <img src="assets/image/img2.jpeg" alt="">
+                </div>
+
+                <div class="projectGroup three">
+                    <div class="projectBox">
+                        <div class="project">
+                            Project 3
+                        </div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem deleniti sapiente tempore laudantium necessitatibus, maxime, omnis ex repellendus doloribus commodi vitae qui recusandae, aspernatur dicta alias harum ipsum nisi.</p>
+                    </div>
+                    <img src="assets/image/img3.jpeg" alt="">
+                </div>
+
+                 <div class="projectGroup four">
+                    <div class="projectBox">
+                        <div class="project">
+                            Project 4
+                        </div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem deleniti sapiente tempore laudantium necessitatibus, maxime, omnis ex repellendus doloribus commodi vitae qui recusandae, aspernatur dicta alias harum ipsum nisi.</p>
+                    </div>
+                    <img src="assets/image/img4.jpeg" alt="">
+                </div>
+                 <div class="navigation">
+                    <div class="arrow right" onclick="nextProject()"><box-icon name='right-arrow-alt' color='#ffffff' ></box-icon></box-icon>
+                <!-- <div class="navigation">
+                    <div class="arrow left" onclick="prevProject()"></div>
+                    <div class="arrow right" onclick="nextProject()"></div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="/NeoPort/projects/assets/js/main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: rgb(187, 234, 216);
+}
+
+canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    z-index: 2;
+    pointer-events: none;
+}
+:root { 
+    --bg-color: rgb(0, 0, 0);
+    --typewriterSpeed: 1s;
+    --typewriterCharacters: 10;
+    --pBGColor: rgb(0, 0, 0);
+    --pZIndex: 1;
+  }
+
+body{
+    position: relative;
+    background-color: white;
+    opacity: .0;
+    animation: CRTon 1s forwards ease-in;
+    font-family: "Roboto Mono";
+    margin-top: 1.4em;
+}
+@keyframes CRTon {
+  70%{
+      opacity: .0;
+      background-color: var(--bg-color);
+    }
+  100%{
+      opacity: 1;
+      background-color: var(--bg-color);
+    }
+}
+.crtLines{
+  animation: scan 12s linear infinite;
+}
+@keyframes scan {
+  50%{
+      opacity: 0;
+    }
+  100%{
+    top: 95%;
+    opacity: .2;
+    border-radius: 0 0 0 0;
+    background: linear-gradient(to bottom, rgba(164, 240, 255, 0) 0%, rgba(126, 126, 126, 0) 50%, rgba(255, 255, 255, 1) 100%);
+  }
+}
+
+.page{
+  transform: scale(0);
+  animation: expand 3s forwards cubic-bezier(1 ,0 , 0, 1);
+}
+@keyframes expand {
+    to{
+      transform: scale(1);
+    }
+}
+
+div{
+  font-size: clamp(.21rem, 1.5vw + 1rem, 2.5rem);
+}
+
+html{
+  font-size: .35em;
+}
+
+.h2-border::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to right, #0e6b0e, black);
+  z-index: -1;
+  filter: blur(20px);
+  animation: glow 1s 8s forwards;
+}
+
+.h2-border {
+  width: 0%;
+  background-color: l#0e6b0e;
+  background-image: linear-gradient(to right, #0e6b0e, black);
+  border-radius: 5px 5px 5px 5px;
+  opacity: .9;
+  animation: borderextend 6s forwards 3s;
+}
+h2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: black;
+  margin-left: .2em;
+}
+h2::after{
+  content: "|";
+  color: aliceblue;
+  opacity: 0;
+  animation: blinker 1s linear 1.2s 10;
+}
+
+@keyframes glow {
+  to {
+    height: 1.5%;
+  }
+}
+@keyframes borderextend {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 1;
+  }
+
+}
+
+
+
+.QR{
+  position: relative;
+  width: 100%;
+  padding-left: 5px;
+}
+
+.QRimage{
+  width: 100%;
+}
+.QROverlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: rgba(167, 249, 255, 0.323);
+  filter: blur(1px);
+  z-index: 1;
+  animation: QROverlayScan 2s forwards 3.1s, HideScan 1s forwards 4s;
+}
+@keyframes HideScan{
+  to{
+    height: 0;
+  }
+}
+@keyframes QROverlayScan {
+  to{
+    top: 100%;
+  }
+}
+.QRHidden{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  z-index: 1;
+  animation: QRHiddenReveal 2s forwards 3s;
+}
+
+@keyframes QRHiddenReveal {
+  to{
+    top: 100%;
+    height: 0%;
+  }
+}
+
+.skillGroup{
+  position: relative;
+}
+.skillGroupHidden{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  z-index: 1;
+}
+.skillGroup.one .skillGroupHidden{
+  animation: skillGroupFlash .3s forwards 2s 5;
+}
+.skillGroup.two .skillGroupHidden{
+  animation: skillGroupFlash .5s forwards 2.3s 3;
+}       
+.skillGroup.three .skillGroupHidden{
+  animation: skillGroupFlash .4s forwards 2.4s 2;
+}
+@keyframes skillGroupFlash {
+  to{
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.skillLineContainer{
+  opacity: 0;
+}
+.skillone{
+  animation: skillLineReveal .1s forwards 3s;
+}
+.skilltwo{
+  animation: skillLineReveal .1s forwards 3.2s;
+}
+.skillthree{
+  animation: skillLineReveal .1s forwards 3.4s;
+}
+.skillfour{
+  animation: skillLineReveal .1s forwards 3.6s;
+}
+.skillfive{
+  animation: skillLineReveal .1s forwards 3.8s;
+}
+.skillsix{
+  animation: skillLineReveal .1s forwards 4s;
+}
+.skillseven{
+  animation: skillLineReveal .1s forwards 4.2s;
+}
+.skilleight{
+  animation: skillLineReveal .1s forwards 4.4s;
+}
+.skillnine{
+  animation: skillLineReveal .1s forwards 4.6s;
+}
+.skillten{
+  animation: skillLineReveal .1s forwards 4.8s;
+}
+.skilleleven{
+  animation: skillLineReveal .1s forwards 5s;
+}
+
+@keyframes skillLineReveal {
+  to{
+    opacity: 1;
+  }
+}
+
+.levelone{
+  animation: skillLevelHide .5s forwards 4s;
+}
+.leveltwo{
+  animation: skillLevelHide .5s forwards 4.2s;
+}
+.levelthree{
+  animation: skillLevelHide .5s forwards 4.4s;
+}
+.levelfour{
+  animation: skillLevelHide .5s forwards 4.6s;
+}
+.levelfive{
+  animation: skillLevelHide .5s forwards 4.8s;
+}
+.levelsix{
+  animation: skillLevelHide .5s forwards 5s;
+}
+.levelseven{
+  animation: skillLevelHide .5s forwards 5.2s;
+}
+.leveleight{
+  animation: skillLevelHide .5s forwards 5.4s;
+}
+.levelnine{
+  animation: skillLevelHide .5s forwards 5.6s;
+}
+.levelten{
+  animation: skillLevelHide .5s forwards 5.8s;
+}
+.leveleleven{
+  animation: skillLevelHide .5s forwards 6s;
+}
+
+@keyframes skillLevelHide {
+  to{
+    opacity: 0;
+  }
+}
+
+.topLine{
+    background-color: lightskyblue;
+    height: .1em;
+    width: 0%;
+    margin-left: 50%;
+}
+.topLine.one{
+  animation: topLine 5s alternate forwards steps(70) 1s; 
+}
+.topLine.two{
+  animation: topLine 4s alternate forwards steps(50) 2s; 
+}
+.topLine.three{
+  animation: topLine 3s alternate forwards steps(50) 3s; 
+}
+
+@keyframes topLine {
+  from {
+    width: 0%;
+    margin-left: 50%;
+  }
+  to{
+    margin-left: 2.5%;
+    width: 95%;
+    
+  }
+}
+
+.shortLine{
+  background-color: rgb(187, 234, 216);
+  height: .5px;
+  width: 0%;
+}
+.shortLine.two{
+animation: shortLine 3s alternate forwards steps(30) 3s;
+}
+.shortLine.three{
+animation: shortLine 3s alternate forwards steps(30) 4s;
+}
+@keyframes shortLine {
+  to{
+    width: 100%;
+  }
+}
+
+
+.cv:hover, .misc:hover, .resume:hover,
+.projects:hover, .contact:hover, .back:hover{
+  cursor: pointer;
+  color: rgb(217, 255, 241);
+  font-size: larger !important;
+  
+  text-shadow: 0 0 1em rgb(187, 234, 216);
+}
+
+
+.cv, .misc, .resume,
+.projects, .contact, .back{
+  font-size: 0em;
+  color: lightskyblue;
+  animation: navReveal 3s forwards linear 1s;
+}
+.resume{
+  color: aliceblue;
+}
+@keyframes navReveal {
+  to{
+  font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
+  }
+}
+
+.arrowLeft:hover, .arrowRight:hover{
+  cursor: pointer;
+  border: solid rgb(217, 255, 241)!important;
+  border-width: 0 .2em .2em 0!important;
+  font-size: larger !important;
+}
+.arrowLeft, .arrowRight{
+  display: inline-block;
+  border: solid black;
+  border-width: 0 0 0 0;
+  animation: arrowAnim 3s forwards linear 1s;
+}
+
+
+@keyframes arrowAnim{
+  to{
+    display: inline-block;
+    border: solid skyblue;
+    border-width: 0 .15em .15em 0;
+    padding: .5em;
+  }
+}
+
+.arrowLeft{
+  transform: rotate(135deg);
+}
+.arrowRight{
+  transform: rotate(-45deg);
+}
+
+
+.nameBox{
+  border: 1px solid skyblue;
+  border-radius: 0 0 1em 0;
+  text-overflow: clip; 
+  overflow: hidden;
+  width: 0%;
+  margin-bottom:.3em;
+  white-space: nowrap;
+  animation: nameReveal 1s forwards linear 1.5s;
+}
+
+@keyframes nameReveal{
+  50%{
+    border: 1px solid skyblue;
+    border-radius: 0 0 1em 0;
+    width: 10%;
+    margin-bottom:.3em;
+  }
+  100%{
+    border: 0px solid black;
+    overflow: visible;
+  }
+}
+
+.h3Box{
+  overflow: hidden;
+  width: 100%;
+}
+.slideLeft{
+  transform : translateX(100%);
+  
+  animation: letterReveal 3s  1s forwards;
+}
+
+@keyframes letterReveal{
+  to{
+    transform: translateX(5%);
+  }
+}
+
+.traitGroup{
+  opacity: 0;
+  width:0%;
+}
+.traitGroup.one{
+  animation: traitReveal 3.5s 1s forwards;
+}
+.traitGroup.two{
+  animation: traitReveal 3.2s 1.5s forwards;
+}
+.traitGroup.three{
+  animation: traitReveal 3s 2s forwards;
+}
+
+@keyframes traitReveal {
+  to{
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.traitBox{
+  animation: traitBoxColors 2s 2s steps(10) forwards;
+}
+
+@keyframes traitBoxColors {
+  0%{
+    background-color: rgba(187, 234, 216, 0.5);
+  }
+  50%{
+    
+    background-color: rgba(100, 100, 133, 0.5);
+  }
+  70%{
+    background-color: rgba(10, 181, 248, 0.5);
+  }
+  90%{
+    background-color: rgba(12, 250, 159, 0.5);
+  }
+  100%{
+    
+  }
+}
+
+.trait{
+  opacity: 0;
+  animation: traitTextReveal .5s forwards 4s;
+}
+@keyframes traitTextReveal {
+  to{
+    opacity: 1;
+  }
+}
+
+.footerBox::before{
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 0%;
+  background: lightskyblue;
+  z-index: -1;
+  filter: blur(20px);
+  animation: glow 1.5s 8s forwards;
+}
+
+.footerBox{
+  background-color: rgb(135, 206, 235);
+  margin: auto;
+  margin-top: 1em;
+  width: 0%;
+  height: 0%;
+  border-radius: 5px 5px 5px 5px;
+  animation: footerAnim 3s forwards linear 1s;
+}
+
+@keyframes footerAnim{
+  to{
+    margin-top: .2em;
+    height: 55%;
+    width:95%;
+  }
+}
+
+.leaders{
+  opacity: 0;
+  animation: leadersReveal 2s forwards 4s;
+}
+
+@keyframes leadersReveal {
+  to{
+    opacity: 1;
+  }
+}
+
+
+
+/*TODO:
+  - convert the typinging animaiton into JAVASCRIPT
+  - make the paragraph text appear line by line in JAVASCRIPT
+  - have random color changes for trait boxes
+*/
+
+@keyframes boxHover {
+  to{
+    opacity: 1;
+  }
+}

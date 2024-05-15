@@ -1,0 +1,133 @@
+
+@media (orientation: Landscape) {
+    .page {
+        font-size: 16px;
+        height: 90vh;
+        max-width: fit-content;
+        /* margin: auto; */
+        /* margin-top: 0.5em; */
+        gap: .5em;
+        display: grid;
+        grid-template-areas:
+            'nav'
+            'top';
+        grid-template-rows: .5fr 8.4fr;
+    }
+
+
+    .nav{
+        grid-area: nav;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .options{
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-areas: 
+        'LA cv stats exp social contact RA';
+        grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
+
+    }
+    .LA{
+        grid-area: LA;
+    }
+    .cv{
+        grid-area: cv;
+    }
+    .stats{
+        grid-area: stats;
+    }
+    .exp{
+        grid-area: exp;
+    }
+    .social{
+        grid-area: social;
+    }
+    .contact{
+        grid-area: contact;
+    }
+    .RA{
+        grid-area: RA;
+    }
+
+    .optionsContainer{
+        display: flex;
+    }
+
+    .hardwareWindow{
+        width: 50%;
+    }
+    .softwareWindow{
+        width: 50%;
+    }
+
+}
+
+@media (orientation: portrait){
+    .page {
+        font-size: 16px;
+        max-width: 900px;
+        margin: auto;
+        gap: .5em;
+        display: grid;
+        grid-template-areas:
+            'nav'
+            'top';
+        grid-template-rows: .5fr 8fr;
+        
+    }
+    
+    
+    
+    .container{
+        outline: red dashed 0px;
+    }
+    
+    .nav{
+        grid-area: nav;
+    }
+    .options{
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-areas: 
+        'LA cv stats exp social contact RA';
+        grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
+        
+    }
+    .LA{
+        grid-area: LA;
+    }
+    .cv{
+        grid-area: cv;
+    }
+    .stats{
+        grid-area: stats;
+    }
+    .exp{
+        grid-area: exp;
+    }
+    .social{
+        grid-area: social;
+    }
+    .contact{
+        grid-area: contact;
+    }
+    .RA{
+        grid-area: RA;
+    }
+}
+
+.matrix{
+    position: absolute;
+    top: 0;
+    left: 2%;
+    width: 96%;
+    height: 100%;
+    cursor: pointer;
+    padding: 0px 0px;
+    object-fit: contain;
+  }
+
+  

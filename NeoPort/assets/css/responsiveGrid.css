@@ -1,0 +1,143 @@
+@media (max-width: 600px){
+    .page {
+        font-size: 16px;
+        height: 100vh;
+        max-width: 900px;
+        gap: .5em;
+        display: grid;
+        padding: 15px 15px;
+        grid-template-areas:
+            'nav'
+            'top'
+            'mid'
+            'bottom'
+            'footer';
+        grid-template-rows: .5fr 3fr 2fr 4fr .4fr;
+        
+    }
+    
+    
+    
+    .container{
+        outline: red dashed 0px;
+    }
+    
+    .nav{
+        grid-area: nav;
+        display: grid;
+        grid-template-areas: 
+        'options'
+        'topLine';
+        grid-template-rows: 10fr 1fr;
+    }
+    .options{
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-areas: 
+        'LA cv stats exp social contact RA';
+        grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 1fr;
+        
+    }
+    .LA{
+        grid-area: LA;
+    }
+    .cv{
+        grid-area: cv;
+    }
+    .stats{
+        grid-area: stats;
+    }
+    .exp{
+        grid-area: exp;
+    }
+    .social{
+        grid-area: social;
+    }
+    .contact{
+        grid-area: contact;
+    }
+    .RA{
+        grid-area: RA;
+    }
+    
+    .top{
+        grid-area: top;
+        gap: .5em;
+        display: grid;
+        grid-template-areas: 
+        'info techskills';
+        grid-template-columns: 1fr 1.5fr;
+    }
+    
+    .info{
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+    }
+    .innerInfo{
+        margin-bottom: 1em;
+    }
+    .QR{
+        display: flex;
+        flex-direction: row;
+    
+    }
+    
+    
+    .techskills{
+        grid-area: techskills;
+    }
+    .skillGroups{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .skillGroup{
+        display: flex;
+        flex-direction: row;
+    }
+    .profGroups{
+        display: flex;
+        flex-direction: column;
+    }
+    .profGroup{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .mid{
+        grid-area: mid;
+        gap: .5em;
+        display: grid;
+        grid-template-areas: 
+        'check traits';
+    }
+    
+    .check{
+        grid-area: check;
+    }
+    
+    .traits{
+        grid-area: traits;
+    }
+    
+    .traitGroups{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .traitGroup{
+        display: flex;
+        flex-direction: row;
+        margin-top: .4em;
+    }
+    
+    .bottom{
+        grid-area: bottom;
+    }
+    
+    .footer{
+        grid-area: footer;
+    }
+}

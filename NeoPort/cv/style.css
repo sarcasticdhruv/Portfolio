@@ -1,0 +1,119 @@
+body {
+    background-color: #000000; /* Black background */
+    color: #33FF33; /* Green text */
+    font-family: 'Courier New', monospace; /* Monospace font */
+}
+
+/* Add a subtle animation to mimic old terminal screens */
+@keyframes flicker {
+    0% {opacity: 1;}
+    50% {opacity: .8;}
+    100% {opacity: 1;}
+}
+
+.nav{
+    grid-area: nav;
+}
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* adjust this value to control the space between items */
+}
+
+.cv, .misc, .resume,
+.projects, .contact, .back{
+  font-size: .35em;
+  color: lightskyblue;
+  font-size: medium;
+  font-family: 'Roboto Mono', monospace;
+  text-decoration: none;
+}
+
+.cv:hover, .misc:hover, .resume:hover,
+.projects:hover, .contact:hover, .back:hover{
+  cursor: pointer;
+  color: rgb(217, 255, 241);
+  font-size: large !important;
+  text-shadow: 0 0 1em rgb(187, 234, 216);
+}
+
+
+.cv{
+  color: aliceblue;
+}
+
+.arrowLeft:hover, .arrowRight:hover{
+  cursor: pointer;
+  border: solid rgb(217, 255, 241)!important;
+  border-width: 0 .2em .2em 0!important;
+  font-size: larger !important;
+}
+.arrowLeft, .arrowRight{
+  display: inline-block;
+  border: solid black;
+  border-width: 0 0 0 0;
+  animation: arrowAnim 1s forwards linear 1s;
+}
+
+
+@keyframes arrowAnim{
+  to{
+    display: inline-block;
+    border: solid skyblue;
+    border-width: 0 .15em .15em 0;
+    padding: .5em;
+  }
+}
+
+.arrowLeft{
+  transform: rotate(135deg);
+}
+.arrowRight{
+  transform: rotate(-45deg);
+}
+
+h2 {
+    border-bottom: 1px solid #0f0;
+}
+
+.resume-download-section {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    padding: 20px;
+}
+
+.download-button {
+    background-color: #0f0;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #078f07;
+    color: #000;
+}
+
+.preview-box {
+  background-color: #ffffff;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: 0;
+  max-width: 850px;
+  transition: max-height 5s ease;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; /* adjust as needed */
+}
+.preview-box iframe {
+  border: none;
+}
