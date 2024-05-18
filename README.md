@@ -62,6 +62,7 @@ If you have any questions or would like to get in touch, feel free to contact me
 - **LinkedIn:** [Dhruv Choudhary](https://www.linkedin.com/in/dhruv-choudhary-india)
 
 ## Website
+
 Check out the live version of my portfolio at [developor-dhruv.netlify.app](developor-dhruv.netlify.app).
 ---
 
