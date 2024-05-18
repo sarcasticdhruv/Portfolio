@@ -1,4 +1,4 @@
-<h1 align="center">My Awesome Project</h1>
+<h1 align="center">Portfolio Website</h1>
 
 Welcome to my portfolio website! This site showcases my skills, experience, and projects in a sleek, user-friendly design. Follow the instructions below to get started.
 
@@ -67,7 +67,7 @@ If you have any questions or would like to get in touch, feel free to contact me
 
 ## Website
 
-Check out the live version of my portfolio at [developer-dhruv.netlify.app](https://developer-dhruv.netlify.app/).
+Check out the live version of my portfolio at [developer-dhruv.netlify.app](https://www.developer-dhruv.netlify.app).
 
 ---
 
