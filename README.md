@@ -63,7 +63,7 @@ If you have any questions or would like to get in touch, feel free to contact me
 
 ## Website
 
-Check out the live version of my portfolio at [developer-dhruv.netlify.app](developer-dhruv.netlify.app).
+Check out the live version of my portfolio at [developer-dhruv.netlify.app](https://www.developer-dhruv.netlify.app).
 
 ---
 
