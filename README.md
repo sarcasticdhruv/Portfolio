@@ -3,7 +3,7 @@
 Welcome to my portfolio website! This site showcases my skills, experience, and projects in a sleek, user-friendly design. Follow the instructions below to get started.
 
 <p align="center">
-  <img src="assests/images/screenshot.gif" alt="Demo of the website">
+  <img src="assets/images/screenshot.gif" alt="Demo of the website">
 </p>
 
 ## Table of Contents
