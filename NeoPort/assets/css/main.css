@@ -79,7 +79,7 @@ html{
   position: absolute;
   width: 100%;
   height: 0%;
-  background: linear-gradient(to right, #0e6b0e, black);
+  background: linear-gradient(to right, #00ad00, black);
   z-index: -1;
   filter: blur(20px);
   animation: glow 1s 8s forwards;
@@ -87,8 +87,8 @@ html{
 
 .h2-border {
   width: 0%;
-  background-color: l#0e6b0e;
-  background-image: linear-gradient(to right, #0e6b0e, black);
+  background-color: l#00cc00;
+  background-image: linear-gradient(to right, #00aa00, black);
   border-radius: 5px 5px 5px 5px;
   opacity: .9;
   animation: borderextend 6s forwards 3s;

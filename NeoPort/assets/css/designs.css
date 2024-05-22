@@ -1,10 +1,10 @@
 h3{
-    color: #0e6b0e;
+    color: #00c700;
     font-size: clamp(.5rem, 1.5vw + 1rem, 2.3rem);
     opacity: 0;
 }
 h4{
-    color: #0e6b0e;
+    color: #00af00;
     font-size: clamp(.2rem, 1.3vw + 1rem, 2.3rem);
     opacity: 0;
 }
@@ -97,11 +97,11 @@ p::before{
 }
 .box .miniBox{
     position: absolute;
-    color: #0e6b0e;
+    color: #05ca05;
     text-align: center;
     width: 45%;
     height: 25%;
-    border: 1px solid #0e6b0e;
+    border: 1px solid #00ac00;
     bottom: .5em;
     right: .3em;
     font-size: xx-small;
@@ -185,7 +185,7 @@ a{
     position: relative;
     width: 20%;
     height: 5%;
-    background-color: #0e6b0e;
+    background-color: #00be00;
 }
 .skillLineEdge{
     width: .5%;
@@ -199,8 +199,8 @@ a{
     left: 10%;
     width: 80%;
     border-radius: 30%;
-    background-color: #0e6b0e;
-    border: 1px solid #0e6b0e;
+    background-color: #009400;
+    border: 1px solid #00a300;
 }
 
 /*Make skill level into a flex from the container*/
@@ -219,7 +219,7 @@ a{
     height: 100%;
     text-align: right;
     padding-right: 2%;
-    border: 1px solid #0e6b0e;
+    border: 1px solid #029602;
     border-radius: 0 0 0 70%;
 }
 .level{
@@ -257,9 +257,9 @@ span{
 .skillInfo{
     font-size: 1em;
     background-color: #000000;
-    border: 1px solid #0e6b0e;
+    border: 1px solid #00a000;
     border-radius: 5px;
-    box-shadow: 0px 0px .5em #0e6b0e;
+    box-shadow: 0px 0px .5em #009c00;
     width: 33%;
     height: 100%;
     z-index: 2;
