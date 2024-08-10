@@ -332,7 +332,7 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
 }
 
 
-.cv:hover, .misc:hover, .resume:hover,
+.cv:hover, .misc:hover, .home:hover,
 .projects:hover, .contact:hover, .back:hover{
   cursor: pointer;
   color: rgb(217, 255, 241);
@@ -342,14 +342,14 @@ animation: shortLine 3s alternate forwards steps(30) 4s;
 }
 
 
-.cv, .misc, .resume,
+.cv, .misc, .home,
 .projects, .contact, .back{
   font-size: 0em;
   color: lightskyblue;
   animation: navReveal 3s forwards linear 1s;
 }
-.resume{
-  color: aliceblue;
+.home{
+  color: rgb(0, 255, 34);
 }
 @keyframes navReveal {
   to{

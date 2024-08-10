@@ -25,7 +25,7 @@ body{
     animation: CRTon 1s forwards ease-in;
     font-family: "Roboto Mono";
     display:flex;
-  align-items:center;
+    align-items:center;
   justify-content:center;
   height:100vh;
   margin-top: 1.4em;
@@ -85,7 +85,7 @@ ul.leaders span + span {
       }
 
       .nameBox{
-        border: 1px solid skyblue;
+        border: 1px solid rgb(0, 121, 168);
         border-radius: 0 0 1em 0;
         text-overflow: clip; 
         overflow: hidden;
@@ -97,7 +97,7 @@ ul.leaders span + span {
       
       @keyframes nameReveal{
         50%{
-          border: 1px solid skyblue;
+          border: 1px solid rgb(11, 167, 63);
           border-radius: 0 0 1em 0;
           width: 100%;
           margin-bottom:.3em;
@@ -113,7 +113,7 @@ ul.leaders span + span {
 }
 
 
-.cv:hover, .misc:hover, .resume:hover,
+.cv:hover, .misc:hover, .home:hover,
 .projects:hover, .contact:hover, .back:hover{
   cursor: pointer;
   color: rgb(217, 255, 241);
@@ -122,19 +122,19 @@ ul.leaders span + span {
 }
 
 
-.cv, .misc, .resume,
+.cv, .misc, .home,
 .projects, .contact, .back{
   font-size: 0em;
-  color: lightskyblue;
+  color: rgb(217, 255, 241);
   font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
 }
-.cv{
-  color: aliceblue;
+.contact{
+  color: rgb(43, 255, 0);
 }
 
 .arrowLeft:hover, .arrowRight:hover{
   cursor: pointer;
-  border: solid rgb(217, 255, 241)!important;
+  border: solid rgb(220, 255, 217)!important;
   border-width: 0 .2em .2em 0!important;
   font-size: larger !important;
 }
@@ -149,7 +149,7 @@ ul.leaders span + span {
 @keyframes arrowAnim{
   to{
     display: inline-block;
-    border: solid skyblue;
+    border: solid rgb(0, 197, 43);
     border-width: 0 .15em .15em 0;
     padding: .5em;
   }
@@ -163,7 +163,7 @@ ul.leaders span + span {
 }
 
 .topLine{
-    background-color: lightskyblue;
+    background-color: rgb(0, 216, 18);
     margin-top: .3em;
     height: .1em;
     width: 0%;
@@ -238,3 +238,30 @@ ul.leaders span + span {
       display: flexbox;
       flex-direction: column;
   }
+  
+  ul.leaders span a:hover{
+    color: aqua;
+    font-size:medium;
+  }
+
+  h1.nameBox:hover{
+    color: yellowgreen;
+  }
+
+  @media screen and (max-width: 756px){
+    .page{
+      width: 90%;
+    }
+    ul.leaders span{
+      /* Adjustments for mobile view */
+      font-size: 18px; /* Example: Make the font smaller */
+      /* Add any other adjustments needed for mobile view */
+    }
+
+    .page {
+      position: absolute;
+      font-size: 16px;
+      height: 100vh;
+  }
+  }
+  

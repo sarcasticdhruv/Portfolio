@@ -55,7 +55,7 @@ function typeWriterEffect(element, lines, lineNumber) {
     });
       // After another 2 seconds, open a new HTML file
       setTimeout(function() {
-         window.open("/NeoPort/index.html", "_self");
+         window.open("/NeoPort/", "_self");
         }, 1000);
     }
 }

@@ -19,7 +19,7 @@ body{
   height:100vh;
 }
 
-.cv:hover, .misc:hover, .resume:hover,
+.cv:hover, .misc:hover, .home:hover,
 .projects:hover, .contact:hover, .back:hover{
   cursor: pointer;
   color: rgb(217, 255, 241);
@@ -28,14 +28,14 @@ body{
 }
 
 
-.cv, .misc, .resume,
+.cv, .misc, .home,
 .projects, .contact, .back{
   font-size: 0em;
   color: lightskyblue;
   font-size: clamp(.2rem, 1.5vw + 1rem, 2.5rem);
 }
 .projects{
-  color: aliceblue;
+  color: rgb(0, 255, 13);
 }
 
 .arrowLeft:hover, .arrowRight:hover{

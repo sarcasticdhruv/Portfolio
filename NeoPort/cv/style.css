@@ -19,9 +19,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px; /* adjust this value to control the space between items */
+    margin-top: 20px;
 }
 
-.cv, .misc, .resume,
+.cv, .misc, .home,
 .projects, .contact, .back{
   font-size: .35em;
   color: lightskyblue;
@@ -30,7 +31,7 @@ body {
   text-decoration: none;
 }
 
-.cv:hover, .misc:hover, .resume:hover,
+.cv:hover, .misc:hover, .home:hover,
 .projects:hover, .contact:hover, .back:hover{
   cursor: pointer;
   color: rgb(217, 255, 241);
@@ -40,12 +41,12 @@ body {
 
 
 .cv{
-  color: aliceblue;
+  color: rgb(0, 255, 34);
 }
 
 .arrowLeft:hover, .arrowRight:hover{
   cursor: pointer;
-  border: solid rgb(217, 255, 241)!important;
+  border: solid rgb(217, 255, 220)!important;
   border-width: 0 .2em .2em 0!important;
   font-size: larger !important;
 }
@@ -116,4 +117,12 @@ h2 {
 }
 .preview-box iframe {
   border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .options {
+    gap: 12px;
+    width: 100%;
+}
+  
 }
